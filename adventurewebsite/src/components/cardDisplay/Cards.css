@@ -1,0 +1,50 @@
+.cards {
+    margin-top: 2rem;
+    color: rgb(21, 24, 172);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  
+ 
+}
+.cards .flexcard {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transition: all 4s cubic-bezier(0.175, 0.885, 0, 1);
+}
+.cards .flexcard:hover {
+    transform: scale(1, 1.05);
+   
+    
+}
+.cards .images {
+   
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+.cards .images h2 {
+   margin-top: -2rem;
+   margin-left: .2rem;
+   margin-bottom: auto;
+   color: rgb(5, 5, 5);
+   background-color: antiquewhite;
+   width: fit-content;
+   border-radius: 3px;
+}
+.cards .flexcard .details {
+    background-color: rgb(255, 255, 255);
+    margin-left: 1rem;
+    border-left:1px solid black ;
+    border-bottom-left-radius: 8px;
+    box-shadow: 6px 5px 5px rgb(160, 153, 153);
+}
+.cards .flexcard .details p {
+    
+    margin-left: .5rem;
+   
+}

@@ -1,0 +1,37 @@
+.footer {
+    margin-top: 1rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer .outro {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer .contacts {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    
+}
+.footer .contacts > div {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.footer .contacts  h2 {
+   /* align-items: center; */
+   margin-left: 2rem;
+}
