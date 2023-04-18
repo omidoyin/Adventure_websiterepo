@@ -1,9 +1,16 @@
 import './App.css';
+import Hero from './components/Hero/Hero';
+import Cards from './components/cardDisplay/Cards';
+import Footer from './components/footer/Footer';
+import Navbar from './components/navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <h2>hi im new and new</h2>
+      <Navbar/>
+      <Hero/>
+      <Cards/>
+      <Footer/>
     </div>
   );
 }
