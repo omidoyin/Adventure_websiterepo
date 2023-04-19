@@ -1,0 +1,46 @@
+.phero {
+    margin-top: 0px;
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(238, 234, 212);
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.phero .heroimage {
+    position: relative;
+    opacity: .5;
+    width: 550px;
+    /* height: 400px; */
+    height: 100%;
+       
+}
+.phero .text {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: .5;
+   
+}
+
+.phero h2 {
+    font-size: 80px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+
+}
+
+.phero p {
+    font-size: 30px;
+   
+}
+

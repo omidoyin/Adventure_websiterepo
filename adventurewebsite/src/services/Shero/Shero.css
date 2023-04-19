@@ -1,0 +1,29 @@
+.shero {
+    width: 100%;
+    height: 30rem;
+    /* background-color: none; */
+    background-image: url("../../components/images/image\ \(1\).jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shero * {
+    /* z-index: 10; */
+}
+
+.shero h2 {
+    font-size: 60px;
+    background-color: rgba(186, 240, 240, 0.459);
+    margin-bottom: 0rem;
+    
+}
+.shero p {
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgba(186, 240, 240, 0.459);
+    
+}

@@ -1,0 +1,37 @@
+.servicelist {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.servicelist div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    background-color: rgb(241, 233, 233);
+    border-radius: 10px;
+    box-shadow: 5px 4px 4px rgb(209, 187, 187);
+    transition: all 4s cubic-bezier(0.165, 0.84, 0.44, 1);
+   
+}
+.servicelist div:hover {
+   
+    transform: scale(1, 1.05);
+}
+.servicelist img {
+    border-radius: 15px;
+}
+.servicelist button {
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    background: none;
+}
+.servicelist button:hover {
+   color: white;
+   background-color: black;
+}

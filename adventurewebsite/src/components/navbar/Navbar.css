@@ -15,6 +15,10 @@
     margin-right: auto;
     margin-left: 100px;
     color: white;
+    cursor: pointer;
+    text-decoration: none;
+    text-emphasis: none;
+  
 }
 .bar .navmenudisplay {
  
@@ -76,8 +80,7 @@
     padding-left: 0rem;
     margin-top: 30rem;
     transition: all 4s cubic-bezier(0.175, 0.885, 0, 1);
-    
-    
+    z-index: 10;   
 }
 .bar .navmenuvertical li {
     margin-top: .5rem;  
@@ -95,4 +98,35 @@
     background-color: rgb(255, 255, 255); 
     transform: scale(1, 1.5);
     color: black;
+}
+
+.bar .navmenuverticaloff {
+    display: none;
+}
+
+.bar .signup {
+    background-color: rgb(0, 0, 0);
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    padding-left: 0rem;
+    margin-top: 50rem;
+    transition: all 4s cubic-bezier(0.175, 0.885, 0, 1);
+    z-index: 10;  
+    /* margin-left: 40rem; */
+    justify-content: center;
+
+    
+}
+.bar .signup * {
+    margin-top: 1rem;
+}
+
+.bar .signupoff {
+    display: none;
 }

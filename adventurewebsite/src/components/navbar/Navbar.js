@@ -1,33 +1,73 @@
 import React from 'react'
 import "./Navbar.css"
+import {BrowserRouter as Router, Link, useNavigate} from "react-router-dom";
+import { useEffect, useState, useRef } from 'react';
 
 
 function Navbar() {
+    let navigate = useNavigate();
+    const [hamClicked, setHamclicked] =useState(false);
+    const [signupClicked, setSignUpClicked] =useState(false);
+
+    useEffect(()=>{document.addEventListener("click", handleClickOutside, true)}, [])
+
+    const refclick = useRef(null)
+    const handleClickOutside =(e) => {
+        if(!refclick.current.contains(e.target)){
+            setHamclicked(false)
+        }
+    }
+
+    useEffect(()=>{document.addEventListener("click", handleSignupClickOutside, true)}, [])
+
+    const signuprefclick = useRef(null)
+    const handleSignupClickOutside =(e) => {
+        if(!signuprefclick.current.contains(e.target)){
+            setSignUpClicked(false)
+        }
+    }
+    
+    
+
+
+
+
+
   return (
     <div className='navbar'> 
 
         <div className='bar'>
-            <h2>Logo and Title</h2>
+            <h2 onClick={()=>{navigate("/")}}>Logo and Title</h2>
             <ul className='navmenudisplay'>
-                <button>Home</button>
-                <button>Services</button>
-                <button>Product</button>
+                <button onClick={()=>{navigate("/")}}>Home</button>
+                <button onClick={()=>{navigate("/services")}}>Services</button>
+                <button onClick={()=>{navigate("/products")}}>Product</button>
             </ul>
-            <button className='btn'>Sign Up</button>
+            <button onClick={()=>{setSignUpClicked(!signupClicked)}} className='btn'>Sign Up</button>
 
-            <h2 className='hamburger'>
+            <h2 onClick={()=>{setHamclicked(!hamClicked)}} className='hamburger' ref={refclick} >
                 Logo
             </h2>
             
-            <ul className='navmenuvertical'>
+            <ul className={hamClicked?'navmenuvertical':'navmenuverticaloff'}>
                 {/* <li>Home</li>
                 <li>Services</li>
                 <li>Products</li> */}
-                <button>Home</button>
-                <button>Services</button>
-                <button>Product</button>
-                <button>Sign Up</button>
+                <button onClick={()=>{navigate("/")}}>Home</button>
+                <button onClick={()=>{navigate("/services")}}>Services</button>
+                <button onClick={()=>{navigate("/products")}}>Product</button>
+                <button onClick={()=>{}}>Sign Up</button>
             </ul>
+            
+                <form ref={signuprefclick} className={signupClicked?'signup': "signupoff"} >
+                    <h2>Logo and Title</h2>
+                    <input type='text' placeholder='username'/>
+                    <input type='text' placeholder= "email"/>
+                    <input type='text' placeholder="password"/>
+                    <input type='submit' value="SignUp" />
+                </form>
+
+            
         </div>
 
        

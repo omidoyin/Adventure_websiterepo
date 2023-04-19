@@ -16,8 +16,10 @@ function Cards() {
                 <div className='details'>
                     <p>{items.text}</p>
                     <p>Explore the earth and her beauty</p>
+                    <button>Book a visit</button>
 
                 </div>
+                
                  </div> ))
         }
     
