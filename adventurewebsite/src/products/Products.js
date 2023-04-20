@@ -5,7 +5,7 @@ import ProductList from './productlists/ProductList'
 
 function Products() {
   return (
-    <div>
+    <div className='products'>
         <Phero/>
         <ProductList/>
         Products

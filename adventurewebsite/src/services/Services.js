@@ -5,7 +5,7 @@ import Shero from './Shero/Shero'
 
 function Services() {
   return (
-    <div>
+    <div className='service'>
       <Shero/>
       <ServiceList/>
       Services

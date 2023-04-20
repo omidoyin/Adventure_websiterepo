@@ -21,9 +21,11 @@ function Navbar() {
     useEffect(()=>{document.addEventListener("click", handleSignupClickOutside, true)}, [])
 
     const signuprefclick = useRef(null)
+    const signuprefclick2 = useRef(null)
     const handleSignupClickOutside =(e) => {
-        if(!signuprefclick.current.contains(e.target)){
+        if(!signuprefclick.current.contains(e.target) && !signuprefclick2.current.contains(e.target) ){
             setSignUpClicked(false)
+          
         }
     }
     
@@ -43,7 +45,7 @@ function Navbar() {
                 <button onClick={()=>{navigate("/services")}}>Services</button>
                 <button onClick={()=>{navigate("/products")}}>Product</button>
             </ul>
-            <button onClick={()=>{setSignUpClicked(!signupClicked)}} className='btn'>Sign Up</button>
+            <button onClick={()=>{setSignUpClicked(!signupClicked)}} className='btn' ref={signuprefclick}>Sign Up</button>
 
             <h2 onClick={()=>{setHamclicked(!hamClicked)}} className='hamburger' ref={refclick} >
                 Logo
@@ -56,16 +58,17 @@ function Navbar() {
                 <button onClick={()=>{navigate("/")}}>Home</button>
                 <button onClick={()=>{navigate("/services")}}>Services</button>
                 <button onClick={()=>{navigate("/products")}}>Product</button>
-                <button onClick={()=>{}}>Sign Up</button>
+                <button onClick={()=>{setSignUpClicked(!signupClicked)}}>Sign Up</button>
             </ul>
-            
-                <form ref={signuprefclick} className={signupClicked?'signup': "signupoff"} >
+            <div className={signupClicked?'formcontainer': "formcontaineroff"}>
+                <form  className='signup' ref={signuprefclick2}>
                     <h2>Logo and Title</h2>
                     <input type='text' placeholder='username'/>
                     <input type='text' placeholder= "email"/>
                     <input type='text' placeholder="password"/>
                     <input type='submit' value="SignUp" />
                 </form>
+             </div>
 
             
         </div>

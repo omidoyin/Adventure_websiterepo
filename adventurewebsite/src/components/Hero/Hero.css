@@ -10,7 +10,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
+
 
 .hero >h2 {
     font-size: 60px;
