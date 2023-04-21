@@ -8,7 +8,7 @@ function ServiceList() {
 
         {
             ServiceCards.map((items)=>(<div>
-                <img src={items.service} alt='' style={{width:"400px", height:"300px"}}/>
+                <img src={items.service} alt='' />
                 <h2>{items.text}</h2>
                 <button>Register your Service</button>
             </div>))

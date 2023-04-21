@@ -19,19 +19,43 @@
 .footer .contacts {
     margin-top: 3rem;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;    
 }
 .footer .contacts > div {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    align-self: center;
+    justify-self: center;
+}
+.footer .contacts  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+  
 }
 .footer .contacts  h2 {
-   /* align-items: center; */
-   margin-left: 2rem;
+    align-items: center;
+    justify-self: center;
+   /* margin-left: 2rem; */
+}
+
+
+@media screen and (max-width:968px) {
+    .footer .contacts > div {
+        font-size: 15px;
+    }
+    .footer .contacts {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media screen and (max-width:700px) {
+    .footer .contacts > div {
+        font-size: 9px;
+    }
+
 }

@@ -9,7 +9,7 @@ function Phero() {
         <img className='heroimage' src={heroimage1} alt=''/>
         <div className='text'>
           <h2>Get your products</h2>
-           <p> at a discounted rate</p>
+           <p> At a discounted rate</p>
         </div>
         <img className='heroimage' src={heroimage2} alt=''/>
         

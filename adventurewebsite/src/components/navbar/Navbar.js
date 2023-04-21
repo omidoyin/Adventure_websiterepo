@@ -1,5 +1,10 @@
 import React from 'react'
 import "./Navbar.css"
+import {HiOutlineMenuAlt4} from 'react-icons/hi';
+import {HiOutlineMenu} from 'react-icons/hi';
+import {FaRegTimesCircle} from 'react-icons/fa'; 
+import {BsFillSignpostSplitFill} from 'react-icons/bs';
+import {BsFillHouseFill} from 'react-icons/bs';
 import {BrowserRouter as Router, Link, useNavigate} from "react-router-dom";
 import { useEffect, useState, useRef } from 'react';
 
@@ -29,17 +34,13 @@ function Navbar() {
         }
     }
     
-    
-
-
-
 
 
   return (
     <div className='navbar'> 
 
         <div className='bar'>
-            <h2 onClick={()=>{navigate("/")}}>Logo and Title</h2>
+            <div onClick={()=>{navigate("/")}} className='logo' > <span>AB</span> <BsFillSignpostSplitFill /><span>ours</span></div>
             <ul className='navmenudisplay'>
                 <button onClick={()=>{navigate("/")}}>Home</button>
                 <button onClick={()=>{navigate("/services")}}>Services</button>
@@ -47,9 +48,9 @@ function Navbar() {
             </ul>
             <button onClick={()=>{setSignUpClicked(!signupClicked)}} className='btn' ref={signuprefclick}>Sign Up</button>
 
-            <h2 onClick={()=>{setHamclicked(!hamClicked)}} className='hamburger' ref={refclick} >
-                Logo
-            </h2>
+            <div onClick={()=>{setHamclicked(!hamClicked)}} className='hamburger' ref={refclick} >
+                {hamClicked? <FaRegTimesCircle className='icon'/> : <HiOutlineMenuAlt4 className='icon'/>}
+            </div>
             
             <ul className={hamClicked?'navmenuvertical':'navmenuverticaloff'}>
                 {/* <li>Home</li>
@@ -62,6 +63,7 @@ function Navbar() {
             </ul>
             <div className={signupClicked?'formcontainer': "formcontaineroff"}>
                 <form  className='signup' ref={signuprefclick2}>
+                    <FaRegTimesCircle className='icon' onClick={()=>{setSignUpClicked(!signupClicked)}}/>
                     <h2>Logo and Title</h2>
                     <input type='text' placeholder='username'/>
                     <input type='text' placeholder= "email"/>

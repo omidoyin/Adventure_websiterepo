@@ -14,7 +14,7 @@ function Footer() {
 
         </div>
         <div className='contacts'>
-            <div>
+            <div className='item'>
                 <h2>About Us</h2>
                 <p>Lorem ipsum dolor sit amet</p>
                 <p>Lorem ipsum dolor sit amet</p>
@@ -23,7 +23,7 @@ function Footer() {
 
             </div>
 
-            <div>
+            <div className='item'>
             <h2>Contact Us</h2>
             <p>Lorem ipsum dolor sit amet</p>
             <p>Lorem ipsum dolor sit amet</p>
@@ -32,7 +32,7 @@ function Footer() {
                 
             </div>
 
-            <div>
+            <div className='item'>
             <h2>Videos</h2>
             <p>Lorem ipsum dolor sit amet</p>
             <p>Lorem ipsum dolor sit amet</p>
@@ -41,7 +41,7 @@ function Footer() {
                 
             </div>
 
-            <div>
+            <div className='item'>
             <h2>Social Media</h2>
             <p>Lorem ipsum dolor sit amet</p>
             <p>Lorem ipsum dolor sit amet</p>

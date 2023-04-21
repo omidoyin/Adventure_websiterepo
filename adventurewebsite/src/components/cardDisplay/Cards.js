@@ -10,7 +10,7 @@ function Cards() {
         {
             CardStore.map((items,index)=> (<div className='flexcard'>
                 <div className='images'>
-                  <img  src={items.image} alt="" style={{width:"400px", height:"300px"}} />
+                  <img  src={items.image} alt=""  />
                   <h2>Cool Stuffs </h2>
                 </div>  
                 <div className='details'>

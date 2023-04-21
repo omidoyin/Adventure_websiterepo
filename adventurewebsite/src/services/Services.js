@@ -8,7 +8,6 @@ function Services() {
     <div className='service'>
       <Shero/>
       <ServiceList/>
-      Services
       </div>
   )
 }

@@ -11,9 +11,6 @@
     justify-content: center;
 }
 
-.shero * {
-    /* z-index: 10; */
-}
 
 .shero h2 {
     font-size: 60px;
@@ -26,4 +23,32 @@
     font-weight: bold;
     background-color: rgba(186, 240, 240, 0.459);
     
+}
+@media screen and (max-width: 968px) {
+    .shero {
+     height: 70vh;
+    }
+    .shero h2 {
+     font-size: 40px;
+ }
+ .shero p {
+     font-size: 30px;
+     text-align: center;
+ }
+ }
+
+@media screen and (max-width: 725px) {
+   .shero {
+    height: 70vh;
+   }
+   .shero h2 {
+    font-size: 40px;
+ 
+}
+.shero p {
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+}
 }

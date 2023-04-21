@@ -10,6 +10,15 @@
     justify-content: space-between;
     align-items: center;
 }
+.bar .logo {
+    color:"white";
+     margin-left: 5rem;
+     border-bottom: 1px solid white;
+     font-size: 20px;
+}
+.bar .logo * {
+    color: white;
+}
 
 .bar >h2 {
     margin-right: auto;
@@ -65,6 +74,10 @@
     margin-right: 100px;
     color: rgb(236, 24, 24);
        
+}
+.bar .icon {
+    font-size: 30px;
+    color: white;
 }
 
 .bar .navmenuvertical {
@@ -129,13 +142,34 @@
     transition: all 4s cubic-bezier(0.175, 0.885, 0, 1);
     z-index: 10;  
     justify-content: center;
-
-    
+   
 }
 .bar .signup * {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .bar .signupoff {
     display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .bar .logo {
+         margin-left: 2rem;
+         font-size: 20px;
+    }
+    .bar .hamburger {
+        margin-right: 20px;    
+    }
+    .bar .navmenudisplay {
+        display: none; 
+    }
+    .bar .btn {
+        display: none;
+       }
+}
+
+@media screen and (max-width:330px) {
+    .bar .hamburger {
+        margin-right: 0px;    
+    }
 }
